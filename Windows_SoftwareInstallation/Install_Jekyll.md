@@ -99,3 +99,26 @@ Run in verbose mode to see all warnings.
 <img src=./jekyll_generated_default_page.png/>
 
 上述操作之后生成的默认网页比较简单，可进一步参考“引用-[3]”中的说明，直接下载和编译模板。
+
+## 3. 发布 Github Pages
+
+如果上述生成的网页要发布在 github 中，则需要首先修改一下 `Gemfile`，按照该文件中的提示，删除
+```Ruby
+gem "jekyll", "~> x.x.x"
+```
+然后添加
+```Ruby
+gem "github-pages", group: :jekyll_plugins
+```
+然后在终端运行下述指令以更新依赖项。
+```Bash
+bundle update
+```
+这里如果卡住，可以修改 `Gemfile` 中 source 指向的源后再试。
+
+> 如果上述尝试后还有问题，则要确保下 Bundler 是否已安装，如果您没有安装 Bundler，可以通过以下命令安装：
+> ` gem install bundler `
+> 确保您使用的是最新版本的 Bundler。可以运行以下命令更新：
+> ` gem update bundler `
+
+将上述相关文件上传至 github 之后，Action 会自动编译和部署，之后可以进入`https://{your_git_account}.github.io/{you_repo_name}/`查看网页效果。
