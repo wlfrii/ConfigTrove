@@ -13,8 +13,7 @@ __Content__
     - [2.5. 配置 Git 用户信息](#2.5)
 
 ---
-
-<!-- -------------------------------------------------------------- -->
+<!-- ======================================================================= -->
 <h2 id="1"> 1. 准备工作 </h2>
 
 1、首先确保安装好了 `git` 工具：
@@ -22,10 +21,11 @@ __Content__
 sudo apt install git
 ```
 
-2、提前配置好 `ssh` .
-可参考 [[SSH] Configuration](https://github.com/wlfrii/ConfigTrove/tree/main/Cross-Platform/SSH-Configuration)。
+2、提前配置好 `ssh` ，可参考 [[SSH] Configuration](https://github.com/wlfrii/ConfigTrove/tree/main/Cross-Platform/SSH-Configuration)。
 
-<!-- -------------------------------------------------------------- -->
+---
+<!-- ======================================================================= -->
+
 <h2 id="2"> 2. 帐号配置 </h2>
 
 <h3 id="2.1"> 2.1 生成 SSH 密钥 </h3>
@@ -132,3 +132,10 @@ git config --global --unset user.email
 # 配置完成后，可以查看当前仓库的配置结果
 git config --list
 ```
+
+---
+<!-- ======================================================================= -->
+
+<h2 id=3> 3. Git 使用方法 </h2>
+
+可参考[Git Skill Notes](https://github.com/wlfrii/ConfigTrove/blob/main/Cross-Platform/Git-Skill-Notes/README.md)。

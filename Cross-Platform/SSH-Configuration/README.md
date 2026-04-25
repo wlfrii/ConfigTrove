@@ -12,6 +12,7 @@ __Content__
 - [3. 测试 SSH 连接](#3)
 
 ---
+<!-- ======================================================================= -->
 
 <h2 id=1> 1. Ubuntu/Debian环境 </h2>
 
@@ -50,6 +51,8 @@ sudo apt install openssh-server
 
 然后再次测试`ssh/scp`应该就OK了。
 
+---
+<!-- ======================================================================= -->
 <h2 id=2> 2. Windows 环境 </h2>
 
 确保你在 Windows 上使用的终端（如 CMD、PowerShell、Git Bash 等）支持 scp 命令。一般来说，Git Bash 或 Windows 10 及以上的 PowerShell 支持此命令。
@@ -88,6 +91,8 @@ Set-Service -Name sshd -StartupType Automatic
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH-Server' -Direction Inbound -Protocol TCP -LocalPort 22 -Action Allow
 ```
 
+---
+<!-- ======================================================================= -->
 <h2 id=3> 3. 测试 SSH 连接 </h3>
 
 在尝试 scp 之前，先测试 SSH 连接。使用以下命令从 Windows/Ubuntu 连接到 Ubuntu/Windows：
