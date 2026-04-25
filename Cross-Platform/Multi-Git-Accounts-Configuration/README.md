@@ -1,4 +1,4 @@
-# [Git] Multi-Git Accounts Configuration
+# Multi-Git Accounts Configuration
 
 在同一台主机上配置多个不同 Git 账户，以方便项目管理。 Windows, Linux, Mac OS 环境下的配置方式相同，这里以 Linux 为例。
 
@@ -23,7 +23,7 @@ sudo apt install git
 ```
 
 2、提前配置好 `ssh` .
-可参考 [[SSH] Configuration]()。
+可参考 [[SSH] Configuration](https://github.com/wlfrii/ConfigTrove/tree/main/Cross-Platform/SSH-Configuration)。
 
 <!-- -------------------------------------------------------------- -->
 <h2 id="2"> 2. 帐号配置 </h2>
