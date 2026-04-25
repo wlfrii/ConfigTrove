@@ -1,4 +1,4 @@
-# Configure PyTorch in Conda
+# 【Linux】 Configure PyTorch in Conda on Ubuntu
 
 在 Ubuntu 上使用 Conda 创建一个能够同时支持 CPU 和 GPU 版的 PyTorch 环境的详细教程如下：
 

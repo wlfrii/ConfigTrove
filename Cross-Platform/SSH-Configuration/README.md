@@ -1,6 +1,20 @@
-# SSH Configuration
+# [SSH] Configuration
 
-## ●Issue：在windows上通过scp拷贝Ubuntu文件得到“connection refused”
+Linux 系统默认带 SSH 客户端（ssh, scp, sftp等命令），但不一定默认启用。Win10 之后的新系统默认安装了 OpenSSH Client 但未安装 OpenSSH server.
+
+__Content__
+
+- [1. Linux环境](#1)
+- [2. 帐号配置](#2)
+    - [2.1 生成 SSH 密钥](#2.1)
+    - [2.2. 添加 SSH 密钥到 SSH Agent](#2.2)
+    - [2.3. 配置 SSH 配置文件](#2.3)
+    - [2.4. 使用不同的 Git 账户](#2.4)
+    - [2.5. 配置 Git 用户信息](#2.5)
+
+---
+
+<h2 id=1> 1. Linux环境 </h2>
 
 ### 1. 确认 SSH 服务正在运行
 
@@ -67,3 +81,4 @@ sudo systemctl restart ssh
 ```
 
 
+## 2. Windows环境

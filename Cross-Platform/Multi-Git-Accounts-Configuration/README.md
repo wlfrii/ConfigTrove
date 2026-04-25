@@ -1,8 +1,21 @@
-# 同一台电脑配置多个Git账户
+# [Git] Multi-Git Accounts Configuration
 
-Windows, Linux, Mac OS 的配置方式相同，这里以 Linux 为例。
+在同一台主机上配置多个不同 Git 账户，以方便项目管理。 Windows, Linux, Mac OS 环境下的配置方式相同，这里以 Linux 为例。
 
-## 1. 准备工作
+__Content__
+
+- [1. 准备工作](#1)
+- [2. 帐号配置](#2)
+    - [2.1 生成 SSH 密钥](#2.1)
+    - [2.2. 添加 SSH 密钥到 SSH Agent](#2.2)
+    - [2.3. 配置 SSH 配置文件](#2.3)
+    - [2.4. 使用不同的 Git 账户](#2.4)
+    - [2.5. 配置 Git 用户信息](#2.5)
+
+---
+
+<!-- -------------------------------------------------------------- -->
+<h2 id="1"> 1. 准备工作 </h2>
 
 1、首先确保安装好了 `git` 工具：
 ```shell
@@ -10,11 +23,12 @@ sudo apt install git
 ```
 
 2、提前配置好 `ssh` .
-可参考XXXXXX。
+可参考 [[SSH] Configuration]()。
 
-## 2. 帐号配置
+<!-- -------------------------------------------------------------- -->
+<h2 id="2"> 2. 帐号配置 </h2>
 
-### 2.1. 生成 SSH 密钥
+<h3 id="2.1"> 2.1 生成 SSH 密钥 </h3>
 
 为每个 Git 账户生成一个 SSH 密钥。
 ```bash
@@ -28,7 +42,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email_2@example.com"
 # 例如：/home/your_user/.ssh/id_rsa_account2
 ```
 
-### 2.2. 添加 SSH 密钥到 SSH Agent
+<h3 id="2.2"> 2.2. 添加 SSH 密钥到 SSH Agent </h3>
 
 确保 SSH agent 正在运行，并将密钥添加到 agent。
 ```bash
@@ -42,7 +56,7 @@ ssh-add ~/.ssh/id_rsa_account1
 ssh-add ~/.ssh/id_rsa_account2
 ```
 
-### 2.3. 配置 SSH 配置文件
+<h3 id="2.3"> 2.3. 配置 SSH 配置文件 </h3>
 
 编辑或创建 ~/.ssh/config 文件，配置不同账户的 SSH 密钥。
 ```bash
@@ -64,7 +78,7 @@ Host github-account2
     IdentityFile ~/.ssh/id_rsa_account2
 ```
 
-### 2.4. 使用不同的 Git 账户
+<h3 id="2.4"> 2.4. 使用不同的 Git 账户 </h3>
 
 1、确保 SSH 密钥在 github 上
 
@@ -93,7 +107,7 @@ git clone git@github-account1:username/repo.git
 git clone git@github-account2:username/repo.git
 ```
 
-### 2.5. 配置 Git 用户信息
+<h3 id="2.5"> 2.5. 配置 Git 用户信息 </h3>
 
 在每个仓库中配置用户名和邮箱。
 ```bash

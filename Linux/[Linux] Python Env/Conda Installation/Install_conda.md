@@ -1,4 +1,4 @@
-# Install conda on Ubuntu
+# 【Linux】 Install conda on Ubuntu.
 
 ## 1. 下载
 

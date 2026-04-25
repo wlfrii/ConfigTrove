@@ -1,5 +1,5 @@
 #! https://zhuanlan.zhihu.com/p/425143325
-# 【Ubuntu - OpenCV-CUDA】 with CUDA 11.0 and OpenGL 详细流程
+# 【Ubuntu】 OpenCV with CUDA 11.0 and OpenGL 详细流程
 
 在 Windows 上折腾了多次之后，非常顺利的在 Ubuntu 上完成配置。
 参照：[【Win10 - OpenCV-CUDA】with VS2017 and CUDA 10.0 (cuDNN)](https://zhuanlan.zhihu.com/p/425133410)
@@ -9,12 +9,12 @@
 ---
 
 <h2 id="1">1.准备</h2>
-<h3 id="1.1"> 1.1 下载 OpenCV</h3> 
+<h3 id="1.1"> 1.1 下载 OpenCV</h3>
 
 [源码下载](https://opencv.org/releases/)，找到相应的版本，然后下载
 [opencv_contrib](https://github.com/opencv/opencv_contrib)进入页面后，看右边的 **Releases** -> __32 tags__，然后点击tags，找到对应的 opencv-contrib 然后进行下载
 
-<h3 id="1.2"> 1.2 安装 CMake 和 CMake-GUI </h3> 
+<h3 id="1.2"> 1.2 安装 CMake 和 CMake-GUI </h3>
 
 ```
 $ sudo apt install -y cmake
@@ -23,7 +23,7 @@ $ sudo apt install -y cmake-qt-gui
 使用时，直接在终端输入 `cmake-gui`。个人觉得通过 gui 编译 OpenCV+ contrib (CUDA, cvDNN) 时候更加一目了然。\
 注意，通过 apt 安装的 cmake 版本要低一些，如果需要高版本的 cmake，可 [CMake官方下载](https://cmake.org/download/)，然后手动安装。
 
-<h3 id="1.3"> 1.3 安装 CUDA</h3> 
+<h3 id="1.3"> 1.3 安装 CUDA</h3>
 
 下载地址[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu)
 ![](./img/cuda_download.png)
@@ -162,17 +162,17 @@ cuda与驱动的对应如下图所示（来源[NVIDIA CUDA Toolkit Release Notes
 
 首先检查自己当前的cuda driver，启动terminal输入
 ```
-$ cat /proc/driver/nvidia/version 
+$ cat /proc/driver/nvidia/version
 ```
 可查看到自己当前的cuda driver版本，如下
 ```
 NVRM version: NVIDIA UNIX x86_64 Kernel Module  450.57  Sun Jul  5 14:42:25 UTC 2020
-GCC version:  gcc version 9.3.0 (Ubuntu 9.3.0-10ubuntu2) 
+GCC version:  gcc version 9.3.0 (Ubuntu 9.3.0-10ubuntu2)
 ```
 cuda driver 版本号为 450.57， 可对应到上图中的cuda 11，因此可安装最新的cuda。
 
 当发现自己的cuda driver版本号较低而cuda版本高时，可以选择：
-1. 升级cuda driver 
+1. 升级cuda driver
 \
 NVIDIA 驱动程序下载[[https://www.nvidia.cn/Download/index.aspx?lang=cn#]](https://www.nvidia.cn/Download/index.aspx?lang=cn#)
 根据自己的显卡型号，下载相应的cuda driver，之后进行安装（安装时可能会提示建议通过Linux Softwares&Updates中的Additional Drivers进行安装，可以不管）
