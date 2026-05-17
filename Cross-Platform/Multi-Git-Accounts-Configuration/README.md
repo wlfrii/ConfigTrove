@@ -98,7 +98,7 @@ ssh -T git@github-account1.com
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-3、在克隆或推送时，使用配置的主机名。
+3、在克隆时，使用配置的主机名。
 ```bash
 # 第一个账户
 git clone git@github-account1:username/repo.git
@@ -132,6 +132,8 @@ git config --global --unset user.email
 # 配置完成后，可以查看当前仓库的配置结果
 git config --list
 ```
+
+配置完成后，就可以使用 `git commit`, `git push` 等常规指令进行操作了。
 
 ---
 <!-- ======================================================================= -->

@@ -68,4 +68,18 @@ $ sudo dpkg -i ./code_1.95.3-1731513102_amd64.deb
    + 实时预览: 支持实时查看 Markdown 内容的格式。
    + 快捷键支持: 提供多种快捷键，简化 Markdown 编辑。
 
-#### 2. Doxygen
+3. __C/C++ Include Guard__
+   开发者：Akira Miyakoda
+   配置：
+   + 打开 VS Code 的 `Settings`，搜索 “Include Guard”，然后找到 “C/C++ Include Guard: Prefix”，设置自定义前缀。
+
+4. __File Header Comment__
+   开发者：Donna Iwan
+   配置：
+   + 打开 VS Code 的 `Settings`，搜索 “Header Comment” 会看到 “File Header Comment: __Parameter__” 和 “File Header Comment: __Template__”，然后点击 “Edit in setting.json”。
+   如果对远程服务器进行配置，选择到 “Remote” 中对应的 “Edit in setting.json”。
+
+   说明：__Parameter__ 中定义变量；__Template__ 中可应用变量。
+
+
+#### 2. Doxygen/*
